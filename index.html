@@ -1,0 +1,952 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Anfido</title>
+	<!-- FAVICON LINK -->
+	<link rel="shortcut icon" href="images/hotel-booking/favicon.png" type="image/x-icon">
+	<!-- STYLESHEETS -->
+	<!-- BOOTSTRAP CSS -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap-theme.min.css">
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome/css/font-awesome.min.css" />
+	<!-- MAGNIFIC LIGHT BOX -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/magnific/magnific-popup.css">
+	<!-- CAROUSEL STYLE LINK -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor/owl-carousel/carousel.css">
+	<!-- DATEPICKER CSS -->
+	<link rel="stylesheet" type="text/css" href="css/vendor/datepicker.css" />
+	<!-- CUSTOM CSS -->
+	<link rel="stylesheet" type="text/css" href="css/custom/style.css">
+</head>
+
+<body class="content-ff-1" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="100">
+	<div id="app">
+		<!--================================= NAVIGATION START ==========================================-->
+		<header>
+			<nav class="topbar1 navbar navbar-default" id="top-nav1">
+				<div class="container">
+					<div class="logo-image1">
+						<a href="#"><img src="images/anfido/logo350x150.jpg" alt="350x150" class="img-responsive" /></a>
+					</div>
+					<div class="logo1-image1">
+						<a href="#"><img src="images/anfido/logo150x50.jpg" alt="150x50" class="img-responsive" /></a>
+					</div>
+
+					<div class="navbar-right">
+
+						<div class="nav">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<div class="collapse navbar-collapse">
+									<div class="menu1-div">
+										<ul class="content-ul menu1-address">
+											<li><img src="images/hotel-booking/40x40x1.png" alt="40x40x1" /></li>
+											<li>
+												<p class="letter-spacing">+385 91 574 67 29</p>
+												<p class="letter-spacing">+385 91 202 65 02</p>
+											</li>
+										</ul>
+										<ul class="content-ul menu1-address">
+											<li>
+												<p class="letter-spacing"><a href="#">anfido.apartmani@gmail.com</a> </p>
+												<p class="letter-spacing">S. Radića 16, Osijek</p>
+											</li>
+										</ul>
+										<div class="menu-booknow btn1-div">
+											<button @click="changeLocale('en')" class="btn" :class="{'btn-1': locale !== 'en' }" :disabled="locale === 'en'">
+												ENG
+											</button>
+											<button @click="changeLocale('hr')" class="btn" :class="{'btn-1': locale !== 'hr' }" :disabled="locale === 'hr'">
+												HR
+											</button>
+										</div>
+									</div>
+									<ul class="nav navbar-nav menu1-ul" id="menu_1">
+										<li class="menu">
+											<a href="#home" class="booking-pagescroll letter-spacing font-weight600">
+											<i class="fa fa-home"></i>
+											</a>
+										</li>
+										<li class="menu">
+											<a href="#about" class="booking-pagescroll letter-spacing font-weight600">
+											{{ $t("O NAMA") }}
+											</a>
+										</li>
+										<li class="menu">
+											<a href="#rooms" class="booking-pagescroll letter-spacing font-weight600">
+											{{ $t("APARTMAN") }}
+											</a>
+										</li>
+										<li class="menu">
+											<a href="#features" class="booking-pagescroll letter-spacing font-weight600">
+											{{ $t("SADRZAJI") }}
+											</a>
+										</li>
+										<li class="menu">
+											<a href="#note" class="booking-pagescroll letter-spacing font-weight600">
+											{{ $t("NAPOMENA") }}
+											</a>
+										</li>
+										<li class="menu">
+											<a href="#gallery" class="booking-pagescroll letter-spacing font-weight600">
+											{{ $t("GALERIJA") }}
+											</a>
+										</li>
+										<li class="menu">
+											<a href="#prices" class="booking-pagescroll letter-spacing font-weight600">
+											{{ $t("CIJENE") }}
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+			</nav>
+		</header>
+		<!--================================= NAVIGATION END ==========================================-->
+		<!--=================================  HEADER-1 START ==========================================-->
+
+		<div class="header-bgimage-1 bgimage-property clearfix" id="home">
+			<div class="container heading-ff-1">
+				<div class="col-sm-12 header-div-1 heading-padding-1 text-center">
+					<div class="header-btn btn1-div">
+						<!-- <a href="#" class="btn btn-1">LEARN MORE</a> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--================================= HEADER-1 ENDS ============================================-->
+
+		<!--================================= WELCOME RESORT START ==========================================-->
+		<section class="section-1-bg section-padding" id="about">
+			<div class="container heading-ff-1">
+				<div class="row">
+					<div class="col-md-6 section-bottom-space20">
+						<img src="images/anfido/welcome.jpg" alt="Welcome Anfido" class="img-responsive" />
+					</div>
+					<div class="col-md-6">
+						<h3>{{ $t("O NAMA") }}</h3>
+						<p class="content-top-space">
+							{{ $t("Novo renovirani apartman (3*) u samom centru Osijeka") }}.
+						</p>
+						<p class="content-top-space">
+							{{ $t("Neposredna blizina kulturno-obrazovnih ustanova, znamenitosti, parkova i raznih zabavnih sadržaja garantira vam da ćete iskusiti srce Slavonije u punom sjaju") }}.
+						</p>
+						<p class="content-top-space">
+							{{ $t("Apartman je veličine 146m2 i prikladan je za 4 do 6 osoba") }}.
+							{{ $t("Sastoji se od kuhinje, blagavaonice i dnevnog boravka spojenih u jednom prostoru, 3 spavace sobe, 2 kupaonice, hodnika, spremišta, balkona i ostakljene terase ( prostora za pusenje )") }}.
+							{{ $t("Cijeli prostor je klimatiziran") }}.
+						</p>
+						<p class="content-top-space">
+							{{ $t("Unutar zgrade nema trajnih stanovnika, tako da ćete moći spavati u miru i tišini iako se u okolici nalazi nekoliko kafića, pubova, klubova i restorana, što znači da nećete morati ići daleko za dobar provod") }}.
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--================================= WELCOME RESORT ENDS ==========================================-->
+
+		<!--================================= ROOMS OFFER START ==========================================-->
+		<section class="section-2-bg section-padding" id="rooms">
+			<div class="container heading-ff-1">
+				<div class="heading-div-1 text-center">
+					<h2>{{ $t("APARTMAN") }}</h2>
+					<img src="images/anfido/underline-1.png" alt="116x22" />
+				</div>
+				<div class="row accordion-row resort-accordion">
+					<div class="col-md-6">
+						<div class="accordion-main">
+							<div class="accordion-title">
+								<img src="images/anfido/room_living.jpg" alt="750x450x1" class="img-responsive" />
+								<div class="accordion-subtitle">
+									<h4>{{ $t("ZAJEDNIČKI PROSTOR") }}</h4>
+								</div>
+								<div class="accordion-icon"></div>
+							</div>
+							<div class="accordion-ans">
+								<div class="accordion-content">
+									<p>
+										{{ $t("Kuhinja, blagavaonica i dnevni boravak su spojeni") }}.
+										{{ $t("Cijeli prostor je klimatiziran") }}.
+										{{ $t("Kuhinja je opremljena perilicom posuđa, posuđem, mikrovalnom pećnicom, pećnicom, elektricnim štednjakom, hladnjakom i aparatom za kavu") }}.
+									</p>
+									<p class="content-top-space">
+										{{ $t("U dnevnom boravku se nalazi TV koji ima satelitski program") }}.
+									</p>
+									<p class="content-top-space">
+										{{ $t("Jedna kupaonica je opremljena tuš kabinom, a druga kadom") }}.
+										{{ $t("Gostima je na raspolaganju usisavač, glačalo, sušilo za kosu, ručnici, posteljina, sapun za ruke te gel za tuširanje i šampon") }}.
+									</p>
+									<p class="content-top-space">
+										{{ $t("U cijelom apartmanu je dostupan WI-FI") }}.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-main top-space section-bottom-space30">
+							<div class="accordion-title">
+								<img src="images/anfido/room_red.jpg" alt="750x450x2" class="img-responsive" />
+								<div class="accordion-subtitle">
+									<h4>{{ $t("CRVENA SOBA") }}</h4>
+								</div>
+								<div class="accordion-icon"></div>
+							</div>
+							<div class="accordion-ans">
+								<div class="accordion-content">
+									<p class="content-top-space">
+										{{ $t("2 kreveta za jednu osobu, noćni ormarići, fotelja i tabure") }}.
+									</p>
+									<p class="content-top-space">
+										{{ $t("Prostor je klimatiziran") }}.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="accordion-main">
+							<div class="accordion-title">
+								<img src="images/anfido/room_blue.jpg" alt="750x450x2" class="img-responsive" />
+								<div class="accordion-subtitle">
+									<h4>{{ $t("PLAVA SOBA") }}</h4>
+								</div>
+								<div class="accordion-icon"></div>
+							</div>
+							<div class="accordion-ans">
+								<div class="accordion-content">
+									<p class="content-top-space">
+										{{ $t("2 kreveta za jednu osobu, noćni ormarići, 2 fotelje, ormar") }}.
+									</p>
+									<p class="content-top-space">
+										{{ $t("Prostor je klimatiziran") }}.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-main top-space section-bottom-space30">
+							<div class="accordion-title">
+								<img src="images/anfido/room_green.jpg" alt="750x450x2" class="img-responsive" />
+								<div class="accordion-subtitle">
+									<h4>{{ $t("ZELENA SOBA") }}</h4>
+								</div>
+								<div class="accordion-icon"></div>
+							</div>
+							<div class="accordion-ans">
+								<div class="accordion-content">
+									<p class="content-top-space">
+										{{ $t("Bračni krevet, noćni ormarići, fotelja i tabure") }}.
+									</p>
+									<p class="content-top-space">
+										{{ $t("Prostor je klimatiziran") }}.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--================================= ROOMS OFFER ENDS ==========================================-->
+
+		<!--=================================  FEATURES START ==========================================-->
+		<div class="section-1-bg section-padding" id="features">
+			<div class="container heading-ff-1">
+				<div class="heading-div-1 text-center">
+					<h2>{{ $t("SADRŽAJI") }}</h2>
+					<img src="images/anfido/underline-1.png" alt="116x22" />
+				</div>
+				<div class="features1">
+					<!-- HEADER SLIDER -->
+					<div id="myCarousel" class="carousel carousel-1 slide row" data-ride="carousel">
+						<ul class="list-group col-xs-12 col-sm-3">
+							<li data-target="#myCarousel" data-slide-to="0" class="list-group-item features1-item active">
+								<div class="post-img">
+									<a href="#"><img src="images/hotel-booking/48x48x1.png" alt="48x48x1"/></a>
+								</div>
+								<p class="letter-spacing font-weight600">{{ $t("SPORTSKI SADRŽAJI") }}</p>
+							</li>
+							<li data-target="#myCarousel" data-slide-to="1" class="list-group-item features1-item">
+								<div class="post-img">
+									<a href="#"><img src="images/hotel-booking/48x48x2.png" alt="48x48x2"/></a>
+								</div>
+								<p class="letter-spacing font-weight600">{{ $t("ZABAVA I ŠOPING") }}</p>
+							</li>
+							<li data-target="#myCarousel" data-slide-to="2" class="list-group-item features1-item">
+								<div class="post-img">
+									<a href="#"><img src="images/hotel-booking/48x48x3.png" alt="48x48x3"/></a>
+								</div>
+								<p class="letter-spacing font-weight600">{{ $t("PRIJEVOZ") }}</p>
+							</li>
+							<li data-target="#myCarousel" data-slide-to="3" class="list-group-item features1-item">
+								<div class="post-img">
+									<a href="#"><img src="images/hotel-booking/48x48x4.png" alt="48x48x4"/></a>
+								</div>
+								<p class="letter-spacing font-weight600">{{ $t("ZNAMENITOSTI") }}</p>
+							</li>
+							<li data-target="#myCarousel" data-slide-to="4" class="list-group-item features1-item">
+								<div class="post-img">
+									<a href="#"><img src="images/hotel-booking/48x48x4.png" alt="48x48x4"/></a>
+								</div>
+								<p class="letter-spacing font-weight600">{{ $t("KULTURNO-OBRAZOVNE USTANOVE") }}</p>
+							</li>
+						</ul>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner col-xs-12 col-sm-9">
+							<div class="item active">
+								<div class="row">
+									<div class="col-md-6 section-bottom-space20 ">
+										<img src="images/anfido/gradskivrt750x600.jpg" alt="750x600x1" class="img-responsive" />
+									</div>
+									<div class="col-md-6">
+										<h4>{{ $t("SPORTSKI SADRŽAJI") }}</h4>
+										<ul class="content-top-space">
+											<li>{{ $t("Stadion") }} Gradski Vrt 2.4km</li>
+											<li>{{ $t("Dvorana") }} Gradski Vrt 2.4km</li>
+											<li>{{ $t("Gradski Bazeni") }} 2.2km</li>
+											<li>{{ $t("Sportska dvorana Zrinjevac") }} 650m</li>
+											<li>{{ $t("Sokolski Dom") }} 600m</li>
+											<li>{{ $t("Sportska zračna luka") }} 3.7km</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Item -->
+							<div class="item">
+								<div class="row">
+									<div class="col-md-6 section-bottom-space20 ">
+										<img src="images/anfido/portanova750x600.jpg" alt="750x600x2" class="img-responsive" />
+									</div>
+									<div class="col-md-6">
+										<h4>{{ $t("ZABAVA I ŠOPING") }}</h4>
+										<ul class="content-top-space">
+											<li>{{ $t("Kino") }} Urania 300m</li>
+											<li>{{ $t("Šoping centar") }} Portanova 4.4km</li>
+											<li>{{ $t("Šoping centar") }} Avenue Mall 3.3km</li>
+											<li>{{ $t("Pub") }} Amsterdam 20m</li>
+											<li>{{ $t("Kafić") }} San Francisco 20m</li>
+											<li>Činkos 100m</li>
+											<li>{{ $t("Restoran") }} Lumiere 300m</li>
+											<li>{{ $t("Restoran") }} Rustika 1.3km</li>
+											<li>{{ $t("Restoran") }} American Bar Dollar 800m</li>
+											<li>McDonalds 500m</li>
+											<li>{{ $t("Slastičarna") }} Petar Pan 900m</li>
+											<li>{{ $t("Mjenjačnica") }} 0m</li>
+											<li>{{ $t("Tržnica") }} 50m</li>
+											<li>Konzum 800m</li>
+											<li>Interspar 1.2km</li>
+											<li>Fabrique Grill & Beer 550m</li>
+											<li>{{ $t("Vinska mušica") }} 700m</li>
+											<li>{{ $t("Pivnica") }} Beertija 1km</li>
+											<li>{{ $t("Pivnica") }} Runda 260m</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Item -->
+							<div class="item">
+								<div class="row">
+									<div class="col-md-6 section-bottom-space20 ">
+										<img src="images/anfido/tramvaj750x600.jpg" alt="750x600x2" class="img-responsive" />
+									</div>
+									<div class="col-md-6">
+										<h4>{{ $t("PRIJEVOZ") }}</h4>
+										<ul class="content-top-space">
+											<li>{{ $t("Tramvaj") }} 500m</li>
+											<li>{{ $t("Autobus") }} 500m</li>
+											<li>{{ $t("Autobusni kolodvor") }} 900m</li>
+											<li>{{ $t("Željeznički kolodvor") }} 700m</li>
+											<li>{{ $t("Zračna luka") }} 700m</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Item -->
+							<div class="item">
+								<div class="row">
+									<div class="col-md-6 section-bottom-space20 ">
+										<img src="images/anfido/tvrdja750x600.jpg" alt="750x600x2" class="img-responsive" />
+									</div>
+									<div class="col-md-6">
+										<h4>{{ $t("ZNAMENITOSTI") }}</h4>
+										<ul class="content-top-space">
+											<li>{{ $t("Trg Ante Starčevića") }} 850m</li>
+											<li>{{ $t("Konkatedrala Svetog Petra i Pavla apostola") }} 850m</li>
+											<li>{{ $t("Promenada") }} 400m</li>
+											<li>{{ $t("Tvrđa") }} 1.1km</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Item -->
+							<div class="item">
+								<div class="row">
+									<div class="col-md-6 section-bottom-space20 ">
+										<img src="images/anfido/fakultet750x600.jpg" alt="750x600x2" class="img-responsive" />
+									</div>
+									<div class="col-md-6">
+										<h4>{{ $t("KULTURNO-OBRAZOVNE USTANOVE") }}</h4>
+										<ul class="content-top-space">
+											<li>{{ $t("Hrvatsko Narodno kazaliste") }} 750m</li>
+											<li>{{ $t("Gradska i Sveučilišna knjižnica") }} 280m</li>
+											<li>{{ $t("Muzej Slavonije") }} 1.3km</li>
+											<li>{{ $t("Hrvatska Gospodarska Komora") }} 260m</li>
+											<li>{{ $t("Ekonomski fakultet") }} 240m</li>
+											<li>{{ $t("Filozofski fakultet") }} 250m</li>
+											<li>{{ $t("Gimnazija Gaudeamus") }} 180m</li>
+											<li>{{ $t("Odjel za matematiku sveučilišta J.J. Strossmayera") }} 180m</li>
+											<li>{{ $t("Fakultet Elektrotehnike, računarstva i informacijskih tehnologija Osijek") }} 1.3km</li>
+											<li>{{ $t("Studenski centar") }} 1.3km</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- End Item -->
+						</div>
+						<!-- End Carousel Inner -->
+
+
+					</div>
+					<!-- End Carousel -->
+
+				</div>
+			</div>
+		</div>
+		<!--================================= FEATURES ENDS ============================================-->
+
+
+		<!--================================= REMARK START ==========================================-->
+		<section class="section-2-bg section-padding" id="note">
+			<div class="container heading-ff-1">
+				<div class="row">
+					<div class="col-md-6 col-md-push-6 section-bottom-space20 ">
+						<img src="images/anfido/remarks.jpg" alt="750x450x5" class="img-responsive" />
+					</div>
+					<div class="col-md-6 col-md-pull-6">
+						<h3>{{ $t("NAPOMENA") }}</h3>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Dolazak od") }} 13h {{ $t("do") }} 15h
+						</p>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Odlazak od") }} 09h {{ $t("do") }} 11h
+						</p>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Pušenje u apartmanu nije dopušteno ( prostor za pušenje je ostakljena terasa )") }}
+						</p>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Nije prikladno za kućne ljubimce") }}
+						</p>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Dječji krevetić dostupan na upit") }}
+						</p>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Transfer od zračne luke na upit") }}
+						</p>
+						<p class="content-top-space">
+							<i class="fa fa-chevron-circle-right"></i>
+							{{ $t("Parking dostupan u obližnjoj podzemnoj garaži") }}
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!--================================= REMARK ENDS ==========================================-->
+
+		<!--================================= CTA START ==========================================-->
+
+		<div class="cta-bgimage-1 bgimage-property clearfix">
+			<div class="container heading-ff-1">
+				<div class="col-sm-push-6 col-sm-6 text-left">
+				</div>
+			</div>
+		</div>
+
+		<!--================================= CTA ENDS ============================================-->
+
+		<!--================================= GALLERY START ==============================================-->
+		<div class="section-padding section-1-bg gallery-section" id="gallery">
+			<div class="container heading-ff-1">
+				<div class="heading-div-1 text-center">
+					<h2>{{ $t("GALERIJA") }}</h2>
+					<img src="images/anfido/underline-1.png" alt="116x22" />
+				</div>
+				<div class="row popup-gallery gallery-div1">
+
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/1.jpg" title="Gallery">
+								<img src="images/anfido/gallery/1_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/2.jpg" title="Gallery">
+								<img src="images/anfido/gallery/2_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/5.jpg" title="Gallery">
+								<img src="images/anfido/gallery/5_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/6.jpg" title="Gallery">
+								<img src="images/anfido/gallery/6_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/7.jpg" title="Gallery">
+								<img src="images/anfido/gallery/7_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/11.jpg" title="Gallery">
+								<img src="images/anfido/gallery/11_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/13.jpg" title="Gallery">
+								<img src="images/anfido/gallery/13_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/4.jpg" title="Gallery">
+								<img src="images/anfido/gallery/4_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/14.jpg" title="Gallery">
+								<img src="images/anfido/gallery/14_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/15.jpg" title="Gallery">
+								<img src="images/anfido/gallery/15_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/18.jpg" title="Gallery">
+								<img src="images/anfido/gallery/18_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/19.jpg" title="Gallery">
+								<img src="images/anfido/gallery/19_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/21.jpg" title="Gallery">
+								<img src="images/anfido/gallery/21_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/22.jpg" title="Gallery">
+								<img src="images/anfido/gallery/22_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/23.jpg" title="Gallery">
+								<img src="images/anfido/gallery/23_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/24.jpg" title="Gallery">
+								<img src="images/anfido/gallery/24_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/20.jpg" title="Gallery">
+								<img src="images/anfido/gallery/20_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/25.jpg" title="Gallery">
+								<img src="images/anfido/gallery/25_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/8.jpg" title="Gallery">
+								<img src="images/anfido/gallery/8_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xs-3 col-sm-3 gallery-col gallery-space">
+						<div class="gallery-image">
+							<a href="images/anfido/gallery/9.jpg" title="Gallery">
+								<img src="images/anfido/gallery/9_thumb.jpg" alt="600x615x1" class="img-responsive" />
+								  <div class="overlay"></div>
+								<span><i class="fa fa-search" aria-hidden="true"></i>	</span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--================================= GALLERY ENDS ==========================================-->
+
+		<!--================================= MAP START ==========================================-->
+
+		<div class="section-1-bg map4-main">
+			<div id="map"></div>
+
+		</div>
+
+		<!--================================= MAP ENDS ==========================================-->
+
+		<!--================================= PRICING START ==========================================-->
+
+		<div class="section-padding section-1-bg" id="prices">
+			<div class="container heading-ff-1">
+				<div class="heading-div-1 text-center">
+					<h2>{{ $t("CIJENE") }}</h2>
+					<img src="images/anfido/underline-1.png" alt="116x22" />
+				</div>
+
+				<div class="row packages6-row">
+
+					<div class="col-sm-6 packages6-col res-bottom-space35">
+						<div class="packages6-price-1 text-center">
+							<h4>1 - 4 {{ $t("osobe") }}</h4>
+							<p class="letter-spacing font-weight600">750 kn</p>
+						</div>
+						<div class="packages6-bg-1">
+							<div class="packages6-content">
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Boravišna pristojba uključena") }}</p>
+									</li>
+								</ul>
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Plaćanje posredstvom Booking.com") }}</p>
+									</li>
+								</ul>
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Plaćanje gotovinom") }}</p>
+									</li>
+								</ul>
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Plaćanje uplatom na račun (moguć R1)") }}</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 packages6-col res-bottom-space35">
+						<div class="packages6-price-1 text-center">
+							<h4>5 - 6 {{ $t("osoba") }}</h4>
+							<p class="letter-spacing font-weight600">900 kn</p>
+						</div>
+						<div class="packages6-bg-1">
+							<div class="packages6-content">
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Boravišna pristojba uključena") }}</p>
+									</li>
+								</ul>
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Plaćanje posredstvom Booking.com") }}</p>
+									</li>
+								</ul>
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Plaćanje gotovinom") }}</p>
+									</li>
+								</ul>
+								<ul class="content-ul packages6-ul">
+									<li><i class="fa fa-check-square-o" style="color:#1f9ea3"></i></li>
+									<li>
+										<p class="letter-spacing">{{ $t("Plaćanje uplatom na račun (moguć R1)") }}</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--================================= PRICING ENDS ============================================-->
+
+
+		<!--================================= FOOTER-1 START ==========================================-->
+
+		<div class="footer1-section section-padding">
+			<div class="container heading-ff-1">
+				<div class="row footer1-row">
+					<div class="col-xs-6 col-sm-6 col-md-5 footer1-col footer-bottom-res-space footer1-common-space">
+						<a href="#"><img src="images/anfido/logo250x100.jpg" alt="250x100x1" class="img-responsive"/></a>
+						<ul class="content-ul footer1-icon">
+							<li><a href="https://www.facebook.com/Anfido-1982014132125524/" target="_blank"><img src="images/anfido/icons/facebook.png" alt="32x32x1" /></a></li>
+							<li><a href="https://www.booking.com/hotel/hr/anfido.hr.html" target="_blank"><img src="images/anfido/icons/booking.png" alt="32x32x2" /></a></li>
+							<li><a href="https://www.airbnb.com/rooms/23230339" target="_blank"><img src="images/anfido/icons/airbnb.png" alt="32x32x2" /></a></li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-5 footer1-col footer-bottom-res-space footer1-common-space">
+						<h5>{{ $t("KONTAKT") }}</h5>
+						<ul class="content-ul footer1-address footer1-address-space">
+							<li><img src="images/anfido/icons/email.png" alt="32x32x6" /></li>
+							<li>
+								<p class="letter-spacing"><a href="#">anfido.apartmani@gmail.com</a> </p>
+							</li>
+						</ul>
+						<ul class="content-ul footer1-address footer1-address-space">
+							<li><img src="images/anfido/icons/poi.png" alt="32x32x7" /></li>
+							<li>
+								<p class="letter-spacing">Stjepana Radića 16 ( 1. {{ $t("kat") }} )</p>
+							</li>
+						</ul>
+						<ul class="content-ul footer1-address footer1-address-space">
+							<li><img src="images/anfido/icons/phone.png" alt="32x32x9" /></li>
+							<li>
+								<p class="letter-spacing"> +385 91 574 67 29</p>
+							</li>
+						</ul>
+						<ul class="content-ul footer1-address">
+							<li><img src="images/anfido/icons/phone.png" alt="32x32x9" /></li>
+							<li>
+								<p class="letter-spacing"> +385 91 202 65 02</p>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-6 col-sm-6 col-md-2 footer1-col footer-bottom-res-space footer1-border-all">
+						<h5>SITE LINKS</h5>
+						<ul class="content-ul links">
+							<li><a href="#home" class="letter-spacing">{{ $t("Pocetna") }}</a></li>
+							<li><a href="#about" class="letter-spacing">{{ $t("O Nama") }}</a></li>
+							<li><a href="#rooms" class="letter-spacing">{{ $t("Apartman") }}</a></li>
+							<li><a href="#features" class="letter-spacing">{{ $t("Sadržaji") }}</a></li>
+							<li><a href="#note" class="letter-spacing">{{ $t("Napomena") }}</a></li>
+							<li><a href="#gallery" class="letter-spacing">{{ $t("Galerija") }}</a></li>
+							<li><a href="#prices" class="letter-spacing">{{ $t("Cijene") }}</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--================================= FOOTER-1 ENDS ==========================================-->
+
+		<!--================================= COPYRIGHT-1 START ==========================================-->
+		<footer class="copyright1-bg">
+			<div class="container copyright1 text-center">
+				<p class="letter-spacing">2018 &copy; All Rights Reserved</p>
+			</div>
+		</footer>
+		<!--================================= COPYRIGHT-1 END ==========================================-->
+
+	</div>
+
+	<!-- JQUERY LIBRARY -->
+	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<!-- SLIDER JS FILES -->
+	<script type="text/javascript" src="js/vendor/slider/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/vendor/slider/owl-slider.js"></script>
+	<!-- MAGNIFIC LIGHT BOX -->
+	<script type="text/javascript" src="js/vendor/magnific/jquery.magnific-popup.js"></script>
+	<!-- SUBSCRIBE MAILCHIMP -->
+	<script type="text/javascript" src="js/vendor/subscribe/subscribe_validate.js"></script>
+	<!-- FORM VALIDATION -->
+	<script type="text/javascript" src="js/vendor/validate/jquery.validate.min.js"></script>
+	<!-- DATEPICKER JS -->
+	<script type="text/javascript" src="js/vendor/datepicker.js"></script>
+	<!-- NUMBER VALIDATION JS FILES -->
+	<script type="text/javascript" src="js/vendor/number.js"></script>
+	<!-- FEATURES TAB SLIDER JS -->
+	<script type="text/javascript" src="js/vendor/features-tab.js"></script>
+
+	<script>
+		// The following example creates complex markers to indicate beaches near
+		// Sydney, NSW, Australia. Note that the anchor is set to (0,32) to correspond
+		// to the base of the flagpole.
+
+		function initMap() {
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 15,
+				center: {
+					lat: 45.558690,
+					lng: 18.682541
+				}
+			});
+
+			setMarkers(map);
+		}
+
+		// Data for the markers consisting of a name, a LatLng and a zIndex for the
+		// order in which these markers should display on top of each other.
+		var pois = [
+			['Home', 45.558690, 18.682541, 1]
+		];
+
+		function setMarkers(map) {
+			// Adds markers to the map.
+
+			// Marker sizes are expressed as a Size of X,Y where the origin of the image
+			// (0,0) is located in the top left of the image.
+
+			// Origins, anchor positions and coordinates of the marker increase in the X
+			// direction to the right and in the Y direction down.
+
+			var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+
+			var image = {
+				url: 'images/hotel-booking/paleblue_MarkerH.png',
+				// // This marker is 20 pixels wide by 32 pixels high.
+				size: new google.maps.Size(20, 32),
+				// // The origin for this image is (0, 0).
+				origin: new google.maps.Point(0, 0),
+				// // The anchor for this image is the base of the flagpole at (0, 32).
+				anchor: new google.maps.Point(0, 32)
+			};
+			// Shapes define the clickable region of the icon. The type defines an HTML
+			// <area> element 'poly' which traces out a polygon as a series of X,Y points.
+			// The final coordinate closes the poly by connecting to the first coordinate.
+			var shape = {
+				// coords: [1, 1, 1, 20, 18, 20, 18, 1],
+				// type: 'poly'
+			};
+			for (var i = 0; i < pois.length; i++) {
+				var poi = pois[i];
+				var marker = new google.maps.Marker({
+					position: {
+						lat: poi[1],
+						lng: poi[2]
+					},
+					map: map,
+					// icon: image,
+					// shape: shape,
+					title: poi[0],
+					zIndex: poi[3]
+				});
+			}
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf8vZZ1cu-70PjW_ll8gw7TJHWYQNEwQw&callback=initMap">
+	</script>
+
+	<!-- THEME JS -->
+	<script type="text/javascript" src="js/custom/custom.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/vue-i18n.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
